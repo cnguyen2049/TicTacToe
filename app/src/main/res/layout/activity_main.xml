@@ -10,8 +10,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How To"
-        android:id="@+id/howto"
+        android:text="@string/how_to"
+        android:id="@+id/howtoBtn"
+        android:textAllCaps="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="132dp" />
@@ -19,8 +20,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
+        android:text="@string/play"
         android:id="@+id/play"
+        android:textAllCaps="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="73dp" />
@@ -29,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Play Tic Tac Toe"
+        android:text="@string/title"
         android:id="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp" />
