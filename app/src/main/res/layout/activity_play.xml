@@ -12,7 +12,7 @@
         android:id="@+id/versusBtn"
         android:textAllCaps="false"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="85dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="0dp" />
 
@@ -23,7 +23,7 @@
         android:id="@+id/computerBtn"
         android:textAllCaps="false"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="85dp"
+        android:layout_marginRight="70dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="0dp" />
 

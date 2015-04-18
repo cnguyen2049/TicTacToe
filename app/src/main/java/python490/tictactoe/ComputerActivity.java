@@ -6,10 +6,9 @@ import android.os.Bundle;
 /**
  * Created by Alex on 4/17/2015.
  */
-public class PlayActivity extends Activity {
-    @Override
+public class ComputerActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.activity_play);
+        setContentView(R.layout.activity_computer);
     }
 }

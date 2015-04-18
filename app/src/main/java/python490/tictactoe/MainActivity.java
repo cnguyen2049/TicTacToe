@@ -17,6 +17,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         View v = findViewById(R.id.howtoBtn);
         v.setOnClickListener(this);
+        View v1 = findViewById(R.id.playBtn);
+        v1.setOnClickListener(this);
     }
 
 
@@ -46,6 +48,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view.getId() == R.id.howtoBtn) {
             Intent intent = new Intent(this, SecondActivity.class);
+
+            this.startActivity(intent);
+        }
+
+        else if (view.getId() == R.id.playBtn) {
+            Intent intent = new Intent(this, PlayActivity.class);
 
             this.startActivity(intent);
         }

@@ -18,6 +18,15 @@
         <activity
             android:name=".SecondActivity">
         </activity>
+        <activity
+            android:name=".PlayActivity">
+        </activity>
+        <activity
+            android:name=".VersusActivity">
+        </activity>
+        <activity
+            android:name=".ComputerActivity">
+        </activity>
     </application>
 
 </manifest>
