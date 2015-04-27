@@ -9,6 +9,7 @@
     <string name="computer">Computer</string>
     <string name="text1">This is the classic Tic Tac Toe game played on a 3x3 grid. This is a two player game where each player takes turn to put their marks (X or O) on a square. Whoever marks in a row wins.</string>
 
+    <string name="name">Name</string>
     <string name="x">X</string>
     <string name="o">O</string>
     <string name="you">You</string>
