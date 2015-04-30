@@ -27,6 +27,9 @@
         <activity
             android:name=".ComputerActivity">
         </activity>
+        <activity
+            android:name=".StartActivity">
+        </activity>
     </application>
 
 </manifest>

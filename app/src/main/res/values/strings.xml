@@ -12,6 +12,6 @@
     <string name="name">Name</string>
     <string name="x">X</string>
     <string name="o">O</string>
-    <string name="you">You</string>
-    <string name="opponent">Opponent</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
 </resources>

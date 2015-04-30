@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tictactoe_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/tictactoeboard" />
+
+        <ImageView
+            android:id="@+id/box1"
+            android:background="@drawable/x"
+            android:alpha="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_alignTop="@+id/board"
+            android:layout_alignLeft="@+id/board"
+            android:layout_alignStart="@+id/board" />
+
+        <ImageView
+            android:id="@+id/box2"
+            android:background="@drawable/x"
+            android:alpha="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_alignTop="@+id/board"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/box3"
+            android:background="@drawable/x"
+            android:alpha="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_alignTop="@+id/board"
+            android:layout_alignRight="@+id/board"
+            android:layout_alignEnd="@+id/board" />
+
+        <ImageView
+            android:id="@+id/box4"
+            android:background="@drawable/x"
+            android:alpha="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/board"
+            android:layout_alignStart="@+id/board" />
+
+        <ImageView
+            android:id="@+id/box5"
+            android:background="@drawable/x"
+            android:alpha="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_alignTop="@+id/box4"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/box6"
+            android:background="@drawable/x"
+            android:alpha="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_alignTop="@+id/box5"
+            android:layout_alignRight="@+id/board"
+            android:layout_alignEnd="@+id/board" />
+
+        <ImageView
+            android:id="@+id/box7"
+            android:background="@drawable/x"
+            android:alpha="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_alignBottom="@+id/board"
+            android:layout_alignLeft="@+id/board"
+            android:layout_alignStart="@+id/board" />
+
+        <ImageView
+            android:id="@+id/box8"
+            android:background="@drawable/x"
+            android:alpha="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_alignTop="@+id/box7"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/box9"
+            android:background="@drawable/x"
+            android:alpha="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:layout_alignBottom="@+id/board"
+            android:layout_alignRight="@+id/board"
+            android:layout_alignEnd="@+id/board" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
