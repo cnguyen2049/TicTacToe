@@ -1,6 +1,7 @@
 package python490.tictactoe;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,14 +21,21 @@ public class StartActivity extends Activity implements View.OnClickListener{
     View box7_view;
     View box8_view;
     View box9_view;
-    VersusActivity va = new VersusActivity();
-    boolean isX = va.getX();
+    // dummy default. will get correct boolean value from VersusActivity
+    boolean isX = true;
+
+
 
 
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            isX = extras.getBoolean("isX");
+        }
 
         v = findViewById(R.id.board);
         v.setOnClickListener(this);
@@ -76,9 +84,11 @@ public class StartActivity extends Activity implements View.OnClickListener{
 //    }
 
 
+
+
+
     @Override
     public void onClick(View view) {
-        Log.d("isX", "" + isX);
         if (view == box1_view) {
             box1_view.setAlpha(1);
             if (isX) {

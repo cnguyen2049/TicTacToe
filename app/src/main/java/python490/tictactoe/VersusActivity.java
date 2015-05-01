@@ -1,6 +1,7 @@
 package python490.tictactoe;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Point;
@@ -16,7 +17,7 @@ import android.widget.Button;
  */
 public class VersusActivity extends Activity implements View.OnClickListener{
     //default top icon is X
-    private boolean isX = true;
+    public boolean isX = true;
     View v;
     View v1;
     View back_view;
@@ -43,7 +44,6 @@ public class VersusActivity extends Activity implements View.OnClickListener{
     public void onClick(View view) {
             // if player 1 button is clicked
             if (view.getId() == R.id.x_versus) {
-                Log.d("getX ", "" + getX());
                 // if player 1's icon is X (by default it is X)
                 if (isX) {
                     // change X to O when clicked
@@ -67,32 +67,11 @@ public class VersusActivity extends Activity implements View.OnClickListener{
                 this.startActivity(intent);
             }
             else if (view.getId() == R.id.startBtn) {
-                Log.d("isX enter START ", "" + isX);
                 Intent intent = new Intent(this, StartActivity.class);
+                intent.putExtra("isX", isX);
                 this.startActivity(intent);
             }
         }
-    public boolean getX() {
-        return isX;
-    }
-
-
-
-    private class DragShadow extends View.DragShadowBuilder {
-        public DragShadow(View view) {
-            super(view);
-        }
-
-        @Override
-        public void onProvideShadowMetrics(Point shadowSize, Point shadowTouchPoint) {
-            super.onProvideShadowMetrics(shadowSize, shadowTouchPoint);
-        }
-
-        @Override
-        public void onDrawShadow(Canvas canvas) {
-            super.onDrawShadow(canvas);
-        }
-    }
 
 
 }
