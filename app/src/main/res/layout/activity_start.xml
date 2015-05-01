@@ -5,6 +5,8 @@
     android:background="@drawable/tictactoe_bg"
     android:orientation="vertical">
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,6 +19,16 @@
             android:layout_centerVertical="true"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/tictactoeboard" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView"
+            android:textSize="25dp"
+            android:layout_above="@+id/board"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="53dp" />
 
         <ImageView
             android:id="@+id/box1"
@@ -113,6 +125,8 @@
             android:layout_alignBottom="@+id/board"
             android:layout_alignRight="@+id/board"
             android:layout_alignEnd="@+id/board" />
+
+
 
 
 

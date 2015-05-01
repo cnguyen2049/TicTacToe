@@ -5,11 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by Alex on 4/28/2015.
  */
-public class StartActivity extends Activity implements View.OnClickListener{
+public class StartActivity extends Activity implements View.OnClickListener {
 
     View v;
     View box1_view;
@@ -25,17 +29,23 @@ public class StartActivity extends Activity implements View.OnClickListener{
     boolean isX = true;
 
 
-
-
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-
+        String p1 = "";
+        String p2 = "";
         Bundle extras = getIntent().getExtras();
+
         if (extras != null) {
             isX = extras.getBoolean("isX");
+            p1 = extras.getString("P1Name");
+            p2 = extras.getString("P2Name");
         }
+
+        TextView textView = (TextView) findViewById(R.id.textView);
+        textView.setText(p1);
+
 
         v = findViewById(R.id.board);
         v.setOnClickListener(this);
@@ -61,31 +71,7 @@ public class StartActivity extends Activity implements View.OnClickListener{
         box9_view.setOnClickListener(this);
 
 
-
-
-
-
-
-
-
-
-
     }
-
-//    @Override
-//    public boolean onTouchEvent(MotionEvent event) {
-//        // MotionEvent object holds X-Y values
-//        if(event.getAction() == MotionEvent.ACTION_DOWN) {
-//            String text = "You click at x = " + event.getX() + " and y = " + event.getY();
-//            Log.d("text ",text+ "");
-//        }
-//
-//        return super.onTouchEvent(event);
-//    }
-
-
-
-
 
     @Override
     public void onClick(View view) {
@@ -94,96 +80,79 @@ public class StartActivity extends Activity implements View.OnClickListener{
             if (isX) {
                 box1_view.setBackgroundResource(R.drawable.x);
                 isX = false;
-            }
-            else {
+            } else {
                 box1_view.setBackgroundResource(R.drawable.o);
                 isX = true;
             }
-        }
-        else if (view == box2_view) {
+        } else if (view == box2_view) {
             box2_view.setAlpha(1);
             if (isX) {
                 box2_view.setBackgroundResource(R.drawable.x);
                 isX = false;
-            }
-            else {
+            } else {
                 box2_view.setBackgroundResource(R.drawable.o);
                 isX = true;
             }
-        }
-        else if (view == box3_view) {
+        } else if (view == box3_view) {
             box3_view.setAlpha(1);
             if (isX) {
                 box3_view.setBackgroundResource(R.drawable.x);
                 isX = false;
-            }
-            else {
+            } else {
                 box3_view.setBackgroundResource(R.drawable.o);
                 isX = true;
             }
-        }
-        else if (view == box4_view) {
+        } else if (view == box4_view) {
             box4_view.setAlpha(1);
             if (isX) {
                 box4_view.setBackgroundResource(R.drawable.x);
                 isX = false;
-            }
-            else {
+            } else {
                 box4_view.setBackgroundResource(R.drawable.o);
                 isX = true;
             }
-        }
-        else if (view == box5_view) {
+        } else if (view == box5_view) {
             box5_view.setAlpha(1);
             if (isX) {
                 box5_view.setBackgroundResource(R.drawable.x);
                 isX = false;
-            }
-            else {
+            } else {
                 box5_view.setBackgroundResource(R.drawable.o);
                 isX = true;
             }
-        }
-        else if (view == box6_view) {
+        } else if (view == box6_view) {
             box6_view.setAlpha(1);
             if (isX) {
                 box6_view.setBackgroundResource(R.drawable.x);
                 isX = false;
-            }
-            else {
+            } else {
                 box6_view.setBackgroundResource(R.drawable.o);
                 isX = true;
             }
-        }
-        else if (view == box7_view) {
+        } else if (view == box7_view) {
             box7_view.setAlpha(1);
             if (isX) {
                 box7_view.setBackgroundResource(R.drawable.x);
                 isX = false;
-            }
-            else {
+            } else {
                 box7_view.setBackgroundResource(R.drawable.o);
                 isX = true;
             }
-        }
-        else if (view == box8_view) {
+        } else if (view == box8_view) {
             box8_view.setAlpha(1);
             if (isX) {
                 box8_view.setBackgroundResource(R.drawable.x);
                 isX = false;
-            }
-            else {
+            } else {
                 box8_view.setBackgroundResource(R.drawable.o);
                 isX = true;
             }
-        }
-        else if (view == box9_view) {
+        } else if (view == box9_view) {
             box9_view.setAlpha(1);
             if (isX) {
                 box9_view.setBackgroundResource(R.drawable.x);
                 isX = false;
-            }
-            else {
+            } else {
                 box9_view.setBackgroundResource(R.drawable.o);
                 isX = true;
             }
@@ -191,8 +160,6 @@ public class StartActivity extends Activity implements View.OnClickListener{
 
 
     }
-
-
 
 
 }
