@@ -25,6 +25,9 @@ public class StartActivity extends Activity implements View.OnClickListener {
     View box7_view;
     View box8_view;
     View box9_view;
+    TextView textView;
+    String p1 = "";
+    String p2 = "";
     // dummy default. will get correct boolean value from VersusActivity
     boolean isX = true;
 
@@ -33,8 +36,6 @@ public class StartActivity extends Activity implements View.OnClickListener {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-        String p1 = "";
-        String p2 = "";
         Bundle extras = getIntent().getExtras();
 
         if (extras != null) {
@@ -43,8 +44,8 @@ public class StartActivity extends Activity implements View.OnClickListener {
             p2 = extras.getString("P2Name");
         }
 
-        TextView textView = (TextView) findViewById(R.id.textView);
-        textView.setText(p1);
+        textView = (TextView) findViewById(R.id.textView);
+        textView.setText(p1 + "'s turn.");
 
 
         v = findViewById(R.id.board);
@@ -75,6 +76,13 @@ public class StartActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        // change text depending on whose turn it is.
+        if (textView.getText().toString().equals(p1 + "'s turn.")) {
+            textView.setText(p2 + "'s turn.");
+        }
+        else {
+            textView.setText(p1 + "'s turn.");
+        }
         if (view == box1_view) {
             box1_view.setAlpha(1);
             if (isX) {

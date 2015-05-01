@@ -100,7 +100,7 @@ public class VersusActivity extends Activity implements View.OnClickListener {
             p2_text.clearFocus();
             intent.putExtra("isX", isX);
             intent.putExtra("P1Name", p1_name);
-
+            intent.putExtra("P2Name", p2_name);
             this.startActivity(intent);
         }
     }
