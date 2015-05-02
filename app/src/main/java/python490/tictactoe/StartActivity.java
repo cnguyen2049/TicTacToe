@@ -29,15 +29,6 @@ public class StartActivity extends Activity implements View.OnClickListener {
     String p1 = "";
     String p2 = "";
 
-    boolean box1_clicked = false;
-    boolean box2_clicked = false;
-    boolean box3_clicked = false;
-    boolean box4_clicked = false;
-    boolean box5_clicked = false;
-    boolean box6_clicked = false;
-    boolean box7_clicked = false;
-    boolean box8_clicked = false;
-    boolean box9_clicked = false;
     String[][] board = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"}};
 
     // dummy default. will get correct boolean value from VersusActivity
@@ -115,8 +106,8 @@ public class StartActivity extends Activity implements View.OnClickListener {
 
         boolean winner = getWinner();
         Log.v("winner ", "" + winner);
-        if (view == box1_view && !box1_clicked) {
-            box1_clicked = true;
+        if (view == box1_view) {
+            box1_view.setOnClickListener(null);
             setTurn();
             box1_view.setAlpha(1);
             if (isX) {
@@ -128,8 +119,8 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 markSpace("O", 0, 0);
                 isX = true;
             }
-        } else if (view == box2_view && !box2_clicked) {
-            box2_clicked = true;
+        } else if (view == box2_view) {
+            box2_view.setOnClickListener(null);
             setTurn();
             box2_view.setAlpha(1);
             if (isX) {
@@ -141,8 +132,8 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 markSpace("O", 0, 1);
                 isX = true;
             }
-        } else if (view == box3_view && !box3_clicked) {
-            box3_clicked = true;
+        } else if (view == box3_view) {
+            box3_view.setOnClickListener(null);
             setTurn();
             box3_view.setAlpha(1);
             if (isX) {
@@ -154,8 +145,8 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 markSpace("O", 0, 2);
                 isX = true;
             }
-        } else if (view == box4_view && !box4_clicked) {
-            box4_clicked = true;
+        } else if (view == box4_view) {
+            box4_view.setOnClickListener(null);
             setTurn();
             box4_view.setAlpha(1);
             if (isX) {
@@ -167,8 +158,8 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 markSpace("O", 1, 0);
                 isX = true;
             }
-        } else if (view == box5_view && !box5_clicked) {
-            box5_clicked = true;
+        } else if (view == box5_view) {
+            box5_view.setOnClickListener(null);
             setTurn();
             box5_view.setAlpha(1);
             if (isX) {
@@ -180,8 +171,8 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 markSpace("O", 1, 1);
                 isX = true;
             }
-        } else if (view == box6_view && !box6_clicked) {
-            box6_clicked = true;
+        } else if (view == box6_view) {
+            box6_view.setOnClickListener(null);
             setTurn();
             box6_view.setAlpha(1);
             if (isX) {
@@ -193,8 +184,8 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 markSpace("O", 1, 2);
                 isX = true;
             }
-        } else if (view == box7_view && !box7_clicked) {
-            box7_clicked = true;
+        } else if (view == box7_view) {
+            box7_view.setOnClickListener(null);
             setTurn();
             box7_view.setAlpha(1);
             if (isX) {
@@ -206,8 +197,8 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 markSpace("O", 2, 0);
                 isX = true;
             }
-        } else if (view == box8_view && !box8_clicked) {
-            box8_clicked = true;
+        } else if (view == box8_view) {
+            box8_view.setOnClickListener(null);
             setTurn();
             box8_view.setAlpha(1);
             if (isX) {
@@ -219,8 +210,8 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 markSpace("O", 2, 1);
                 isX = true;
             }
-        } else if (view == box9_view && !box9_clicked) {
-            box9_clicked = true;
+        } else if (view == box9_view) {
+            box9_view.setOnClickListener(null);
             setTurn();
             box9_view.setAlpha(1);
             if (isX) {
