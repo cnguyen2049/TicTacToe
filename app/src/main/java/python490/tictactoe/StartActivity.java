@@ -104,124 +104,178 @@ public class StartActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        boolean winner = getWinner();
-        Log.v("winner ", "" + winner);
-        if (view == box1_view) {
-            box1_view.setOnClickListener(null);
-            setTurn();
-            box1_view.setAlpha(1);
-            if (isX) {
-                box1_view.setBackgroundResource(R.drawable.x);
-                markSpace("X", 0, 0);
-                isX = false;
-            } else {
-                box1_view.setBackgroundResource(R.drawable.o);
-                markSpace("O", 0, 0);
-                isX = true;
-            }
-        } else if (view == box2_view) {
-            box2_view.setOnClickListener(null);
-            setTurn();
-            box2_view.setAlpha(1);
-            if (isX) {
-                box2_view.setBackgroundResource(R.drawable.x);
-                markSpace("X", 0, 1);
-                isX = false;
-            } else {
-                box2_view.setBackgroundResource(R.drawable.o);
-                markSpace("O", 0, 1);
-                isX = true;
-            }
-        } else if (view == box3_view) {
-            box3_view.setOnClickListener(null);
-            setTurn();
-            box3_view.setAlpha(1);
-            if (isX) {
-                box3_view.setBackgroundResource(R.drawable.x);
-                markSpace("X", 0, 2);
-                isX = false;
-            } else {
-                box3_view.setBackgroundResource(R.drawable.o);
-                markSpace("O", 0, 2);
-                isX = true;
-            }
-        } else if (view == box4_view) {
-            box4_view.setOnClickListener(null);
-            setTurn();
-            box4_view.setAlpha(1);
-            if (isX) {
-                box4_view.setBackgroundResource(R.drawable.x);
-                markSpace("X", 1, 0);
-                isX = false;
-            } else {
-                box4_view.setBackgroundResource(R.drawable.o);
-                markSpace("O", 1, 0);
-                isX = true;
-            }
-        } else if (view == box5_view) {
-            box5_view.setOnClickListener(null);
-            setTurn();
-            box5_view.setAlpha(1);
-            if (isX) {
-                box5_view.setBackgroundResource(R.drawable.x);
-                markSpace("X", 1, 1);
-                isX = false;
-            } else {
-                box5_view.setBackgroundResource(R.drawable.o);
-                markSpace("O", 1, 1);
-                isX = true;
-            }
-        } else if (view == box6_view) {
-            box6_view.setOnClickListener(null);
-            setTurn();
-            box6_view.setAlpha(1);
-            if (isX) {
-                box6_view.setBackgroundResource(R.drawable.x);
-                markSpace("X", 1, 2);
-                isX = false;
-            } else {
-                box6_view.setBackgroundResource(R.drawable.o);
-                markSpace("O", 1, 2);
-                isX = true;
-            }
-        } else if (view == box7_view) {
-            box7_view.setOnClickListener(null);
-            setTurn();
-            box7_view.setAlpha(1);
-            if (isX) {
-                box7_view.setBackgroundResource(R.drawable.x);
-                markSpace("X", 2, 0);
-                isX = false;
-            } else {
-                box7_view.setBackgroundResource(R.drawable.o);
-                markSpace("O", 2, 0);
-                isX = true;
-            }
-        } else if (view == box8_view) {
-            box8_view.setOnClickListener(null);
-            setTurn();
-            box8_view.setAlpha(1);
-            if (isX) {
-                box8_view.setBackgroundResource(R.drawable.x);
-                markSpace("X", 2, 1);
-                isX = false;
-            } else {
-                box8_view.setBackgroundResource(R.drawable.o);
-                markSpace("O", 2, 1);
-                isX = true;
-            }
-        } else if (view == box9_view) {
-            box9_view.setOnClickListener(null);
-            setTurn();
-            box9_view.setAlpha(1);
-            if (isX) {
-                box9_view.setBackgroundResource(R.drawable.x);
-                markSpace("X", 2, 2);
-                isX = false;
-            } else {
-                box9_view.setBackgroundResource(R.drawable.o);
-                markSpace("O", 2, 2);
-                isX = true;
+        if (!getWinner()) {
+            if (view == box1_view) {
+                box1_view.setOnClickListener(null);
+                setTurn();
+                box1_view.setAlpha(1);
+                if (isX) {
+                    box1_view.setBackgroundResource(R.drawable.x);
+                    markSpace("X", 0, 0);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = false;
+                } else {
+                    box1_view.setBackgroundResource(R.drawable.o);
+                    markSpace("O", 0, 0);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = true;
+                }
+            } else if (view == box2_view) {
+                box2_view.setOnClickListener(null);
+                setTurn();
+                box2_view.setAlpha(1);
+                if (isX) {
+                    box2_view.setBackgroundResource(R.drawable.x);
+                    markSpace("X", 0, 1);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = false;
+                } else {
+                    box2_view.setBackgroundResource(R.drawable.o);
+                    markSpace("O", 0, 1);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = true;
+                }
+            } else if (view == box3_view) {
+                box3_view.setOnClickListener(null);
+                setTurn();
+                box3_view.setAlpha(1);
+                if (isX) {
+                    box3_view.setBackgroundResource(R.drawable.x);
+                    markSpace("X", 0, 2);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = false;
+                } else {
+                    box3_view.setBackgroundResource(R.drawable.o);
+                    markSpace("O", 0, 2);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = true;
+                }
+            } else if (view == box4_view) {
+                box4_view.setOnClickListener(null);
+                setTurn();
+                box4_view.setAlpha(1);
+                if (isX) {
+                    box4_view.setBackgroundResource(R.drawable.x);
+                    markSpace("X", 1, 0);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = false;
+                } else {
+                    box4_view.setBackgroundResource(R.drawable.o);
+                    markSpace("O", 1, 0);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = true;
+                }
+            } else if (view == box5_view) {
+                box5_view.setOnClickListener(null);
+                setTurn();
+                box5_view.setAlpha(1);
+                if (isX) {
+                    box5_view.setBackgroundResource(R.drawable.x);
+                    markSpace("X", 1, 1);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = false;
+                } else {
+                    box5_view.setBackgroundResource(R.drawable.o);
+                    markSpace("O", 1, 1);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = true;
+                }
+            } else if (view == box6_view) {
+                box6_view.setOnClickListener(null);
+                setTurn();
+                box6_view.setAlpha(1);
+                if (isX) {
+                    box6_view.setBackgroundResource(R.drawable.x);
+                    markSpace("X", 1, 2);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = false;
+                } else {
+                    box6_view.setBackgroundResource(R.drawable.o);
+                    markSpace("O", 1, 2);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = true;
+                }
+            } else if (view == box7_view) {
+                box7_view.setOnClickListener(null);
+                setTurn();
+                box7_view.setAlpha(1);
+                if (isX) {
+                    box7_view.setBackgroundResource(R.drawable.x);
+                    markSpace("X", 2, 0);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = false;
+                } else {
+                    box7_view.setBackgroundResource(R.drawable.o);
+                    markSpace("O", 2, 0);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = true;
+                }
+            } else if (view == box8_view) {
+                box8_view.setOnClickListener(null);
+                setTurn();
+                box8_view.setAlpha(1);
+                if (isX) {
+                    box8_view.setBackgroundResource(R.drawable.x);
+                    markSpace("X", 2, 1);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = false;
+                } else {
+                    box8_view.setBackgroundResource(R.drawable.o);
+                    markSpace("O", 2, 1);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = true;
+                }
+            } else if (view == box9_view) {
+                box9_view.setOnClickListener(null);
+                setTurn();
+                box9_view.setAlpha(1);
+                if (isX) {
+                    box9_view.setBackgroundResource(R.drawable.x);
+                    markSpace("X", 2, 2);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = false;
+                } else {
+                    box9_view.setBackgroundResource(R.drawable.o);
+                    markSpace("O", 2, 2);
+                    if (getWinner()) {
+                        textView.setText(null);
+                    }
+                    isX = true;
+                }
             }
         }
 
