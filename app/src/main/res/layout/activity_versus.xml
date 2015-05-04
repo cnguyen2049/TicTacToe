@@ -65,13 +65,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="115dp"
-            android:background="@drawable/backbutton" />
+            android:background="@drawable/back_button" />
 
         <Button
             android:id="@+id/startBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/startbutton" />
+            android:background="@drawable/start_button" />
     </LinearLayout>
 
 

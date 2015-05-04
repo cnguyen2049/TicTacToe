@@ -30,6 +30,15 @@
         <activity
             android:name=".StartActivity">
         </activity>
+        <activity
+            android:name=".HowToActivity1">
+        </activity>
+        <activity
+            android:name=".HowToActivity2">
+        </activity>
+        <activity
+            android:name=".HowToActivity3">
+        </activity>
     </application>
 
 </manifest>
