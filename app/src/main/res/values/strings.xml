@@ -14,4 +14,6 @@
     <string name="o">O</string>
     <string name="player1">Player 1</string>
     <string name="player2">Player 2</string>
+    <string name="positive_btn">Retry</string>
+    <string name="negative_btn">Home</string>
 </resources>
